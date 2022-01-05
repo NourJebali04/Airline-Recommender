@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Airlines{% endblock %}
+<style>
+  a:hover, a:active {
+  background-color: #0AB9FC;
+}
+</style>
+
+{% block content %}
+  <h3>Destinations: </h3>
+
+{% for air, dest in bestdest.items() %}
+<div style="width:100%"> <strong>{{air}}</strong> provides flights to:
+
+{% for i in range(20) %}
+{{ dest[i] }},
+{% endfor %} <p> and many more destinations</p>
+{% endfor %}
+  </div>
+{% endblock %}

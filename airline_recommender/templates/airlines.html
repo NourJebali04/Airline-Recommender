@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Airlines{% endblock %}
+
+{% block content %}
+  <h3>Airlines based on your demand: </h3>
+  <p>To go from {{source}} to {{destination}} , you can contact these airline companies:</p>
+  {% for airline in airlines %}
+
+<p style=""><span>{{airline}}</span></p>
+{% endfor %}
+
+{% endblock %}

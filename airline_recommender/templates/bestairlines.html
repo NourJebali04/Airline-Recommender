@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Airlines{% endblock %}
+
+
+{% block content %}
+  <h3>Best Airlines: </h3>
+{% for airline in best %}
+
+  <p style="">{{airline}}</p>
+
+
+{% endfor %}
+<a class="button button-default-outline button-nina button-sm" href="/destinations">learn more</a>
+
+{% endblock %}
